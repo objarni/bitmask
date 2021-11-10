@@ -19,10 +19,10 @@ unsigned int b(char const * bitmask) {
     char cleaned[80];
     clean(bitmask, cleaned);
     size_t bitmask_length = strlen(cleaned);
-    for(int i=0; i < bitmask_length; i++) // "010" --> i=2,1,0
+    for(int i=0; i < bitmask_length; i++)
     {
         unsigned int ix = bitmask_length - i - 1;
-        unsigned int value = 1 << i; // value --> 4, 2, 1
+        unsigned int value = 1 << i;
         if(cleaned[ix] == '1') {
             result += value;
         }
